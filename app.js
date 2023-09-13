@@ -10,7 +10,13 @@ app.set('view engine' ,'ejs')
 app.listen(3000);
 
 app.get('/', (req,res) => {
-    res.render('index' , {title: 'home'})
+    const blogs = [
+        {title: 'youd zohi' , snippet:'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
+        {title: 'ayoud mahi' , snippet:'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
+        {title: 'zalia moghad' , snippet:'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
+        {title: 'nassir mofi' , snippet:'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
+    ];
+    res.render('index' , {title: 'home',blogs} );
 });
 
 app.get('/about', (req,res) => {
