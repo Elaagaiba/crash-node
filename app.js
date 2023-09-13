@@ -10,15 +10,15 @@ app.set('view engine' ,'ejs')
 app.listen(3000);
 
 app.get('/', (req,res) => {
-    res.render('index' )
+    res.render('index' , {title: 'home'})
 });
 
 app.get('/about', (req,res) => {
-    res.render('about')
+    res.render('about', {title: 'about'})
 });
 
 app.get('/blogs/create',(req, res) => {
-    res.render('create')
+    res.render('create', {title: 'create'})
 })
 //redirect 
 // app.get('/about_us', (req ,res) => {
