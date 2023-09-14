@@ -10,8 +10,11 @@ app.set('view engine' ,'ejs')
 //listen for request 
 app.listen(3000);
 
-//middleware
+//middleware 
 app.use(morgan('dev'))
+
+//static middleware
+app.use(express.static('public'))
 
 app.get('/', (req,res) => {
     const blogs = [
